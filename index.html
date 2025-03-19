@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookLand || Tailwind Css</title>
+    <!-- ========== Icons ========== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- ========== Font========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--========== Tailwind Css ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-primary: "Oswald", "sans-serif";
+        --font-secondary: "Inter", "sans-serif";
+
+        --color-text: #2c1810;
+        --color-text-light: #564640;
+        --color-white: #fff;
+        --color-bg: #e9c91a;
+        --color-bg-light: #f6efe4;
+        --color-bg-dark: #e8cca2;
+
+        --breakpoint-sm-1: 375px;
+        --breakpoint-sm-2: 425px;
+        --breakpoint-3xl: 1880px;
+
+        --animate-marquee: marquee 25s linear infinite;
+        --animate-marquee2: marquee2 25s linear infinite;
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        @keyframes marquee2 {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- ========== Header ========== -->
+    <header
+      class="w-full h-[70px] py-[15px] sm:h-[80px] lg:h-[108px] lg:py-[30px]"
+    >
+      <div class="container mx-auto">
+        <!-- Navbar -->
+        <nav
+          class="mx-auto flex items-center justify-between px-[15px] sm:px-[20px] lg:px-[30px] xl:px-[30px] xl:max-w-[1355px] xl:mx-auto"
+        >
+          <!-- Logo -->
+          <a href="#">
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              class="w-[140px] h-[40px] md:w-[186px] md:h-[45px]"
+            />
+          </a>
+
+          <!-- Nav Menu Btn -->
+          <div
+            class="w-[32px] h-[32px] bg-bg px-[8px] py-[4px] rounded-lg sm:hidden"
+          >
+            <i class="ri-menu-line"></i>
+          </div>
+
+          <!-- Nav Links -->
+          <div class="hidden sm:flex items-center gap-8 lg:gap-10">
+            <div class="flex items-center gap-2">
+              <a
+                href="#"
+                class="textlg font-secondary text-text font-bold cursor-pointer duration-300 hover:underline decoration-2"
+                >Author</a
+              >
+              <div class="text-text opacity-50">|</div>
+              <a
+                href="#"
+                class="textlg font-secondary text-text font-bold cursor-pointer duration-300 hover:underline decoration-2"
+                >Blog</a
+              >
+            </div>
+            <button
+              class="bg-text text-white font-secondary font-bold py-3 px-8 rounded-md cursor-pointer duration-300 hover:bg-bg hover:text-text"
+            >
+              Buy on Amazon
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- ========== Home ========== -->
+      <section class="xl:pb-[230px] xl-2:pb-[160px] w-full overflow-hidden">
+        <div
+          class="bg-bg-light rounded-lg py-[15px] mx-[15px] md:mx-[20px] md:py-[80px] md:rounded-[50px] lg:py-[40px] lg:mx-30px xl:py-[60px] xl:mx-[100px]"
+        >
+          <div
+            class="flex flex-col items-center gap-10 px-[15px] sm:gap-20 md:px-[20px] md:gap-20 lg:grid lg:grid-cols-2 lg:px-[30px] xl:gap-20 3xl:mx-[132px]"
+          >
+            <!-- Home Contents -->
+            <div class="md:flex flex-col items-center lg:items-start">
+              <div class="flex flex-col items-center">
+                <span
+                  class="text-xs bg-bg-dark mb-[10px] rounded-lg font-bold font-secondary text-text text-center py-[6px] px-[5px] md:text-sm md:px-[10px] md:mb-[20px]"
+                >
+                  #1 Award-Winning and Best-Selling Author
+                </span>
+              </div>
+              <div class="flex flex-col gap-4 mb-[40px] md:gap-6 xl:gap-10">
+                <h1
+                  class="text-[38px] text-text font-bold text-center font-primary leading-[48px] md:leading-[70px] md:text-[58px] lg:text-start"
+                >
+                  Empower your mind and transform your life
+                </h1>
+                <p
+                  class="text-center text-text-light text-sm font-secondary lg:text-lg lg:text-start"
+                >
+                  Self-help books provide strategies and insights to transform
+                  your life.
+                </p>
+              </div>
+              <div
+                class="flex flex-col items-center gap-4 mb-[15px] sm:flex-row"
+              >
+                <div>
+                  <img
+                    src="/images/home-btn.svg"
+                    alt="Button"
+                    class="w-[140px] h-[60px] rounded-lg sm:w-[185px] sm:h-[77px] sm:rounded-lg"
+                  />
+                </div>
+                <div
+                  class="flex flex-col items-center font-secondary text-text font-medium sm:items-start sm:w-[50%]"
+                >
+                  <div class="flex items-center">
+                    <p class="text-lg mr-2">4.0</p>
+                    <div class="flex">
+                      <i class="ri-star-fill text-yellow-500"></i>
+                      <i class="ri-star-fill text-yellow-500"></i>
+                      <i class="ri-star-fill text-yellow-500"></i>
+                      <i class="ri-star-fill text-yellow-500"></i>
+                      <i class="ri-star-line text-yellow-500"></i>
+                    </div>
+                  </div>
+                  <p class="text-sm">Rated by Over 5,000 Happy Readers!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Home's Book  Feature -->
+            <div
+              class="flex flex-col items-center lg:pl-[35px] xl:pl-[40px] 2xl:pl-[65px]"
+            >
+              <div
+                class="absolute bottom-40 right-10 flex items-center justify-center w-[100px] h-[100px] bg-bg rounded-full sm-1:bottom-56 sm-2:bottom-68 sm:w-[130px] sm:h-[130px] sm:bottom-68 sm:right-42 md:bottom-36 md:right-42 lg:bottom-148 lg:right-18 xl:top-40 xl:right-42 2xl:top-34 2xl:right-40 3xl:right-53 z-10"
+              >
+                <p
+                  class="w-[70%] font-secondary text-[10px] font-bold text-text text-center sm:text-sm"
+                >
+                  Over 1 million copies sold worldwide
+                </p>
+              </div>
+              <div class="xl:absolute xl:bottom-0 2xl:top-43">
+                <img
+                  src="/images/home.avif"
+                  alt="Book"
+                  class="w-full rounded-lg sm:w-[460px] sm:rounded-xl md:w-[460px] lg:w-[375px] xl:w-[462px] 2xl:w-[500px]"
+                />
+                <p
+                  class="mt-[20px] text-text-light font-medium text-sm font-secondary text-center"
+                >
+                  This eBook has an iBook, PDF, & ePub Versions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Clients ========= -->
+      <section
+        class="py-[60px] md:py-[100px] lg:py-[120px] xl:py-[150px] w-full overflow-hidden"
+      >
+        <div class="flex flex-col items-center gap-6 px-[15px]">
+          <p class="text-text font-bold text-sm font-secondary">
+            The International Bestseller
+          </p>
+          <!-- Clients -->
+          <div
+            class="flex items-center justify-center flex-wrap gap-6 md:gap-8 lg:gap-10 xl:gap-20"
+          >
+            <img
+              src="/images/client-1.svg"
+              alt="Client"
+              class="w-[140px] md:w-[185px]"
+            />
+            <img
+              src="/images/client-2.svg"
+              alt="Client"
+              class="w-[140px] md:w-[185px]"
+            />
+            <img
+              src="/images/client-3.svg"
+              alt="Client"
+              class="w-[140px] md:w-[185px]"
+            />
+            <img
+              src="/images/client-4.svg"
+              alt="Client"
+              class="w-[140px] md:w-[185px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== About Us =========== -->
+      <section
+        class="pb-[60px] md:pb-[100px] lg:pb-[120px] w-full overflow-hidden"
+      >
+        <div
+          class="flex flex-col gap-8 px-[15px] md:flex-row md:px-[20px] lg:items-center lg:px-[30px] xl:gap-20 xl:max-w-[1355px] xl:mx-auto"
+        >
+          <!-- About Image -->
+          <img
+            src="/images/about.avif"
+            alt="About US"
+            class="rounded-3xl object-cover md:w-[349px] lg:w-[467px] xl:w-[635px]"
+          />
+
+          <!-- About Contents -->
+          <div>
+            <div class="flex flex-col items-start">
+              <span
+                class="text-sm font-bold font-secondary text-text text-center bg-bg-dark mb-[10px] py-[6px] px-[10px] rounded-lg md:mb-[20px]"
+              >
+                #1 Bestselling Author
+              </span>
+            </div>
+            <h2
+              class="text-[34px] text-text font-bold font-primary mb-[10px] md:text-[42px] lg:text-[50px]"
+            >
+              Johan Maxwell
+            </h2>
+            <div class="flex flex-col gap-2">
+              <div class="flex gap-1 text-sm font-secondary">
+                <div class="text-text font-bold">Specialization:</div>
+                <div class="text-text-light">
+                  Author, Motivational Speaker, and Life Coach
+                </div>
+              </div>
+              <div class="flex gap-1 text-sm font-secondary">
+                <div class="text-text font-bold">Experience:</div>
+                <div class="text-text-light">10+ years of experience</div>
+              </div>
+              <div class="flex gap-1 text-sm font-secondary">
+                <div class="text-text font-bold">Publications:</div>
+                <div class="text-text-light">10 books</div>
+              </div>
+            </div>
+            <div
+              class="w-full h-[1px] bg-text-light opacity-30 my-[20px]"
+            ></div>
+            <div class="mb-[15px]">
+              <p class="text-lg font-bold text-text font-secondary mb-[5px]">
+                "A positive attitude is not just a state of mind; it's a way of
+                life that opens doors to endless possibilities."
+              </p>
+              <div class="text-lg text-text-light font-secondary">
+                — Johan Maxwell
+              </div>
+            </div>
+            <button
+              class="py-4 px-8 bg-text font-secondary text-white font-bold rounded-lg cursor-pointer duration-300 hover:bg-bg hover:text-text"
+            >
+              Explore my story
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Testimonial =========== -->
+      <section class="w-full">
+        <div class="overflow-x-hidden">
+          <div class="flex mb-[25px] animate-marquee whitespace-nowrap">
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+          </div>
+
+          <div class="flex mb-[25px] animate-marquee2 whitespace-nowrap">
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+            <span
+              ><div class="bg-bg-light rounded-lg p-[20px] mr-[25px]">
+                <div class="flex items-center gap-2 mb-[10px]">
+                  <img src="/images/star.svg" class="w-[70px]" />
+                  <div class="text-text-light">|</div>
+                  <img src="/images/check-icon.svg" class="w-[14px]" />
+                  <div class="text-xs font-secondary text-text-light">
+                    Verified Reviewer
+                  </div>
+                </div>
+                <h3 class="text-lg font-primary text-text font-bold mb-[10px]">
+                  Practical and powerful
+                </h3>
+                <p
+                  class="w-[70%] text-sm font-secondary text-text-light mb-[20px]"
+                >
+                  Lorem ipsum dolor sit,<br />
+                  amet consectetur adipisicing elit.
+                </p>
+                <div class="text-lg font-bold text-text font-secondary">
+                  David L
+                </div>
+              </div></span
+            >
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 mt-[30px]">
+          <div class="text-text font-secondary font-bold md:text-lg">4.0</div>
+          <img src="/images/half-star-two.svg" class="w-[92px]" />
+          <div class="text-text font-secondary font-bold md:text-lg">
+            5426 reviews
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= Copy Book ========== -->
+      <section
+        class="py-[60px] md:py-[100px] lg:py-[120px] xl:py-[150px] w-full overflow-hidden"
+      >
+        <div
+          class="flex flex-col items-center gap-8 px-[15px] md:px-[20px] lg:px-[30px] xl:max-w-[1100px] xl:mx-auto"
+        >
+          <h2
+            class="text-center mb-[20px] text-[34px] text-text font-bold font-primary md:text-[42px] lg:text-[50px]"
+          >
+            Grab your copybook today
+          </h2>
+
+          <!-- Copy Books -->
+          <div
+            class="flex flex-wrap items-center justify-center gap-3 md:gap-6 md:mb-[30px]"
+          >
+            <button
+              class="py-[10px] px-[20px] text-text font-secondary font-medium bg-bg rounded-lg duration-300 cursor-pointer hover:text-bg-light hover:bg-text lg:py-4 lg:px-8"
+            >
+              Amazon
+            </button>
+            <button
+              class="py-[10px] px-[20px] text-text font-secondary font-medium bg-bg rounded-lg duration-300 cursor-pointer hover:text-bg-light hover:bg-text lg:py-4 lg:px-8"
+            >
+              Walmart
+            </button>
+            <button
+              class="py-[10px] px-[20px] text-text font-secondary font-medium bg-bg rounded-lg duration-300 cursor-pointer hover:text-bg-light hover:bg-text lg:py-4 lg:px-8"
+            >
+              Kobo
+            </button>
+            <button
+              class="py-[10px] px-[20px] text-text font-secondary font-medium bg-bg rounded-lg duration-300 cursor-pointer hover:text-bg-light hover:bg-text lg:py-4 lg:px-8"
+            >
+              Apple books
+            </button>
+            <button
+              class="py-[10px] px-[20px] text-text font-secondary font-medium bg-bg rounded-lg duration-300 cursor-pointer hover:text-bg-light hover:bg-text lg:py-4 lg:px-8"
+            >
+              Audible
+            </button>
+            <button
+              class="py-[10px] px-[20px] text-text font-secondary font-medium bg-bg rounded-lg duration-300 cursor-pointer hover:text-bg-light hover:bg-text lg:py-4 lg:px-8"
+            >
+              Kindle
+            </button>
+          </div>
+          <p class="w-[80%] text-text-light font-secondary text-lg text-center">
+            Not find the book in your country?
+            <a href="#" class="text-text font-bold">
+              Find international editions here.
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- =========== Reviews ========== -->
+      <section class="w-full overflow-hidden">
+        <div
+          class="relative flex-col items-center px-[15px] md:grid md:grid-cols-2 md:gap-x-[30px] md:items-start md:px-[20px] lg:grid-cols-3 lg:grid-auto-row-fr lg:px-[30px] xl:max-w-[1355px] xl:mx-auto"
+        >
+          <!-- Item 1 -->
+          <div
+            class="bg-bg-dark p-[20px] mb-[30px] rounded-2xl lg:col-start-3 lg:row-start-1"
+          >
+            <div class="flex flex-col items-center">
+              <h3
+                class="text-[50px] font-bold text-text font-primary mb-[10px]"
+              >
+                4.6
+              </h3>
+              <img
+                src="/images/half-star.svg"
+                alt="Rate"
+                class="w-[140px] mb-[10px]"
+              />
+              <p class="text-lg font-primary text-text font-bold text-center">
+                Ready by over 5,000 happy readers!
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="bg-text p-[20px] mb-[30px] rounded-2xl lg:col-start-1 lg:row-start-1"
+          >
+            <div>
+              <p class="text-lg font-primary text-white font-bold mb-[40px]">
+                This e-book completely changed my perspective on life
+              </p>
+              <div>
+                <div
+                  class="text-lg font-bold text-white font-secondary mb-[10px]"
+                >
+                  - Louls Ferguson
+                </div>
+                <div class="text-sm font-medium text-bg-light font-secondary">
+                  Author of five #1 new york times bestsellers
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="w-full h-[320px] bg-[url('/images/review-2.avif')] bg-center bg-cover bg-no-repeat rounded-2xl mb-[30px] lg:col-start-2 lg:row-start-1 md:w-[349px] md:h-[400px] lg:w-full lg:h-[376px]"
+          >
+            <div
+              class="relative top-37 flex flex-col gap-2 px-[20px] pb-[20px] sm-1:top-44 md:top-64 lg:top-49 lg:px-[30px] lg:pb-[30px] xl:top-56"
+            >
+              <p class="w-[95%] text-lg font-bold text-white font-primary">
+                From the very first chapter, I felt like this book was speaking
+                directly to me.
+              </p>
+              <div>
+                <div
+                  class="text-lg font-bold text-white font-secondary mb-[10px]"
+                >
+                  - Noah Collins
+                </div>
+                <div class="text-sm font-medium text-bg-light font-secondary">
+                  Awaken the best version of you
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div
+            class="bg-bg p-[20px] mb-[30px] rounded-2xl lg:col-start-2 lg:row-start-2"
+          >
+            <div>
+              <img
+                src="/images/dark-star.svg"
+                alt="Rate"
+                class="w-[110px] mb-[10px]"
+              />
+              <p class="text-lg font-bold text-text font-primary">
+                Reading this e-book was like having a personal coach guiding me
+                every step of the way.
+              </p>
+              <div>
+                <div
+                  class="text-lg font-bold text-text font-secondary mb-[10px]"
+                >
+                  - Olivia W
+                </div>
+                <div class="text-sm font-medium text-text font-secondary">
+                  Olympic gold medalist and world record holder
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div
+            class="bg-bg-light p-[30px] mb-[30px] rounded-2xl lg:col-start-1 lg:row-start-2"
+          >
+            <img
+              src="/images/review-1.avif"
+              class="w-full h-[250px] object-cover mb-[20px] rounded-lg"
+            />
+            <p class="text-lg font-bold text-text font-primary mb-[40px]">
+              From the very first chapter, I felt like this book was speaking
+              directly to me.
+            </p>
+            <div>
+              <div class="text-lg font-bold text-text font-secondary mb-[10px]">
+                – James K
+              </div>
+              <div class="text-sm font-medium text-text font-secondary">
+                #1 Bestselling author of the unlock your inner power
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div
+            class="bg-[url('/images/review-3.avif')] bg-center bg-cover bg-no-repeat w-full h-[363px] rounded-2xl sm-1:h-[432px] sm-2:h-[493px] sm:h-[510]"
+          >
+            <img
+              src="/images/play-icon.svg"
+              alt="Play"
+              class="w-[45px] h-[45px] relative -bottom-75 left-3 cursor-pointer duration-300 hover:opacity-90 sm-1:-bottom-92 sm-2:-bottom-105 sm:-bottom-107"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Chapter ========== -->
+      <section
+        class="w-full py-[60px] md:py-[100px] lg:py-[120px] xl:py-[150px]"
+      >
+        <div
+          class="flex flex-col items-center gap-10 px-[15px] md:grid md:grid-cols-2 md:items-start md:gap-6 md:px-[20px] lg:gap-8 lg:px-[30px] xl:max-w-[1355px] xl:mx-auto xl:gap-20"
+        >
+          <!-- Chapter Left Side -->
+          <div class="md:sticky md:top-0">
+            <h2
+              class="leading-[45px] text-[34px] text-text font-bold font-primary md:text-[42px] lg:text-[50px] lg:leading-[60px] lg:w-[80%]"
+            >
+              What you’ll find inside key lessons from the Book
+            </h2>
+            <p
+              class="text-lg font-secondary text-text-light mt-[20px] mb-[40px] md:my-[40px] lg:w-[80%]"
+            >
+              Each chapter is designed to guide you through essential lessons
+              that foster personal growth and development.
+            </p>
+
+            <!-- Chapter Images -->
+            <div class="relative left-3 md:flex md:items-end">
+              <img
+                src="/images/chapter-1.avif"
+                class="w-[210px] h-[210px] rounded-3xl -rotate-5 lg:w-[315px] lg:h-[315px] xl:w-[420px] xl:h-[420px]"
+              />
+              <img
+                src="/images/chapter-2.avif"
+                class="w-[167px] h-[167px] rounded-3xl rotate-7 md:absolute md:left-40 lg:w-[200px] lg:h-[200px] lg:left-60 xl:w-[278px] xl:h-[278px]"
+              />
+            </div>
+          </div>
+
+          <!-- Chapter Right Side -->
+          <div class="md:flex md:flex-col md:items-center md:gap-10">
+            <!-- Chapters -->
+            <div class="bg-text rounded-3xl">
+              <div
+                class="flex flex-col gap-6 p-[20px] md:p-[30px] xl:p-[60px] xl:pr-[100px]"
+              >
+                <div>
+                  <h3
+                    class="text-lg font-bold text-bg font-primary mb-[10px] md:text-[22px]"
+                  >
+                    Chapter 1: The power of mindset
+                  </h3>
+                  <div class="text-bg-light font-secondary md:text-lg">
+                    Discover how your thoughts shape your reality
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-bg font-primary mb-[10px] md:text-[22px]"
+                  >
+                    Chapter 2: Building better habits
+                  </h3>
+                  <div class="text-bg-light font-secondary md:text-lg">
+                    Learn the science behind habit formation
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-bg font-primary mb-[10px] md:text-[22px]"
+                  >
+                    Chapter 3: Mastering time and productivity
+                  </h3>
+                  <div class="text-bg-light font-secondary md:text-lg">
+                    Explore proven strategies to manage your time effectively
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-bg font-primary mb-[10px] md:text-[22px]"
+                  >
+                    Chapter 4: Cultivating Self-Discipline
+                  </h3>
+                  <div class="text-bg-light font-secondary md:text-lg">
+                    Understand the importance of self-discipline
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="text-lg font-bold text-bg font-primary mb-[10px] md:text-[22px]"
+                  >
+                    Chapter 5: Embracing change and resilience
+                  </h3>
+                  <div class="text-bg-light font-secondary md:text-lg">
+                    Thrive, and turn challenges into opportunities for growth
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chapter Details -->
+            <div>
+              <p
+                class="text-lg font-primary text-text font-bold mb-[10px] md:text-[22px] xl:w-[90%] xl:text-2xl"
+              >
+                A page daily for a year of growth and inspiration—200 Pages to
+                Transform Your Life.
+              </p>
+              <div class="flex flex-col gap-6 mt-[30px] xl:mt-[50px]">
+                <div class="flex items-center justify-between pb-[15px]">
+                  <div
+                    class="text-lg font-bold text-text pr-[20px] md:text-[22px]"
+                  >
+                    1. The importance of mindset
+                  </div>
+                  <i
+                    class="ri-arrow-down-s-line cursor-pointer md:text-2xl"
+                  ></i>
+                </div>
+                <div class="flex items-center justify-between pb-[15px]">
+                  <div
+                    class="text-lg font-bold text-text pr-[20px] md:text-[22px]"
+                  >
+                    2. The power of habits
+                  </div>
+                  <i
+                    class="ri-arrow-down-s-line cursor-pointer md:text-2xl"
+                  ></i>
+                </div>
+                <div class="flex items-center justify-between pb-[15px]">
+                  <div
+                    class="text-lg font-bold text-text pr-[20px] md:text-[22px]"
+                  >
+                    3. Time management mastery
+                  </div>
+                  <i
+                    class="ri-arrow-down-s-line cursor-pointer md:text-2xl"
+                  ></i>
+                </div>
+                <div class="flex items-center justify-between pb-[15px]">
+                  <div
+                    class="text-lg font-bold text-text pr-[20px] md:text-[22px]"
+                  >
+                    4. The role of Self-Discipline
+                  </div>
+                  <i
+                    class="ri-arrow-down-s-line cursor-pointer md:text-2xl"
+                  ></i>
+                </div>
+                <div class="flex items-center justify-between pb-[15px]">
+                  <div
+                    class="text-lg font-bold text-text pr-[20px] md:text-[22px]"
+                  >
+                    5. Navigating change with resilience
+                  </div>
+                  <i
+                    class="ri-arrow-down-s-line cursor-pointer md:text-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Journey ========== -->
+      <section
+        class="px-[15px] md:px-[20px] lg:px-[30px] xl:max-w-[1355px] xl:mx-auto w-full overflow-hidden"
+      >
+        <div class="bg-bg-light rounded-3xl">
+          <div
+            class="flex flex-col gap-6 px-[25px] pt-[25px] md:flex-row md:items-center md:py-0 md:pl-[30px] md:pr-[60px] lg:px-[60px] lg:gap-10"
+          >
+            <div class="md:my-[40px]">
+              <h2
+                class="text-[26px] font-primary text-text font-bold md:text-[30px] lg:text-[40px]"
+              >
+                Start your journey to personal growth today
+              </h2>
+              <p
+                class="text-sm font-secondary text-text-light t-[10px] mb-[20px] md:mt-[10px] md:mb-[20px] lg:text-lg lg:my-[20px]"
+              >
+                Embark on a transformative adventure that will empower you to
+                become the best version of yourself.
+              </p>
+              <div class="flex flex-col gap-4 lg:flex-row lg:items-center">
+                <div>
+                  <button
+                    class="bg-bg py-4 px-8 font-bold text-text font-secondary rounded-md cursor-pointer duration-300 hover:bg-text hover:text-bg-light"
+                  >
+                    Get your copy now
+                  </button>
+                </div>
+                <p class="text-sm font-secondary text-text-light lg:text-base">
+                  Limited time offer, get it today
+                </p>
+              </div>
+            </div>
+            <div class="relative grid grid-cols-2 my-[60px]">
+              <img
+                src="/images/book-1.avif"
+                alt="Book"
+                class="w-[145px] -rotate-10 ml-[80px] rounded-xl lg:w-[208px] lg:ml-[70px] xl:w-[292px] xl:ml-[90px] 2xl:ml-[80px]"
+              />
+              <img
+                src="/images/book-2.avif"
+                alt="Book"
+                class="w-[145px] -rotate-10 -ml-[70px] rounded-2xl lg:w-[300px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== Blog ========== -->
+      <section
+        class="py-[60px] md:py-[100px] lg:py-[120px] xl:py-[150px] w-full overflow-hidden"
+      >
+        <div
+          class="px-[15px] md:px-[20px] lg:px-[30px] xl:max-w-[1355px] xl:mx-auto"
+        >
+          <div
+            class="flex flex-col gap-6 mb-[40px] md:flex-row md:items-center md:justify-between"
+          >
+            <h2
+              class="text-[34px] text-text font-bold font-primary md:text-[42px] lg:text-[50px]"
+            >
+              My Blog
+            </h2>
+            <div>
+              <button
+                class="bg-text py-4 px-8 text-bg-light font-bold rounded-md duration-300 cursor-pointer hover:bg-bg hover:text-text"
+              >
+                View all
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3"
+          >
+            <div class="flex flex-col gap-4">
+              <img src="/images/blog-1.jpg" class="rounded-3xl" />
+              <div class="flex items-start flex-col gap-2">
+                <div
+                  class="bg-bg-dark text-sm font-medium text-text font-secondary py-[5px] px-[14px] rounded-xl"
+                >
+                  January 24, 2024
+                </div>
+                <h3
+                  class="text-xl font-primary text-text font-bold md:text-[22px]"
+                >
+                  5 Habits that will transform your life
+                </h3>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <img src="/images/blog-2.jpg" class="rounded-3xl" />
+              <div class="flex items-start flex-col gap-2">
+                <div
+                  class="bg-bg-dark text-sm font-medium text-text font-secondary py-[5px] px-[14px] rounded-xl"
+                >
+                  January 24, 2024
+                </div>
+                <h3
+                  class="text-xl font-primary text-text font-bold md:text-[22px]"
+                >
+                  A key to stress-free living
+                </h3>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <img src="/images/blog-3.jpg" class="rounded-3xl" />
+              <div class="flex items-start flex-col gap-2">
+                <div
+                  class="bg-bg-dark text-sm font-medium text-text font-secondary py-[5px] px-[14px] rounded-xl"
+                >
+                  January 24, 2024
+                </div>
+                <h3
+                  class="text-xl font-primary text-text font-bold md:text-[22px]"
+                >
+                  10 strategies to unlock your true potential
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- ========= Contact ========== -->
+      <section
+        class="bg-text pt-[60px] pb-[30px] md:pt-[80px] md:pb-[40px] lg:pt-[95px] lg:pb-[50px] w-full overflow-hidden"
+      >
+        <div
+          class="px-[15px] md:px-[20px] lg:px-[30px] xl:max-w-[1370px] xl:mx-auto"
+        >
+          <div
+            class="flex flex-col items-center gap-8 mb-[40px] md:flex-row md:mb-[60px] lg:gap-30 xl:gap-70 xl:mb-[120px]"
+          >
+            <h3
+              class="text-white font-bold text-2xl font-primary text-center md:text-[28px] md:text-start lg:text-[34px] xl:text-[40px]"
+            >
+              Get growth tips delivered to you.
+            </h3>
+            <div>
+              <div class="flex flex-col items-center gap-4 mb-[20px]">
+                <input
+                  class="w-[290px] min-h-[66px] py-2 px-5 bg-white text-text rounded-lg sm-1:w-[345px] sm-2:w-[395px] md:w-[352px] md:py-[8px] md:pl-[20px] md:pr-[160px] lg:w-[432px] xl:w-[545px]"
+                  type="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+                <button
+                  class="bg-bg text-text font-bold py-3 px-8 rounded-md cursor-pointer duration-300 hover:bg-white hover:text-bg md:absolute md:right-8 md:mt-[9px] lg:right-10 xl:right-20 2xl:right-32 3xl:right-53"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <p class="font-secondary text-white text-center md:text-start">
+                No spam, just valuable updates.
+              </p>
+            </div>
+          </div>
+          <div class="bg-text-light w-full h-[1px]"></div>
+          <div
+            class="flex flex-col items-center gap-6 my-[30px] md:flex-row md:justify-between md:my-[40px]"
+          >
+            <div class="flex items-center justify-center flex-wrap gap-4">
+              <a href="#" class="text-lg font-secondary text-bg-light"
+                >Author</a
+              >
+              <a href="#" class="text-lg font-secondary text-bg-light">Blog</a>
+              <a href="#" class="text-lg font-secondary text-bg-light"
+                >Contact</a
+              >
+              <a href="#" class="text-lg font-secondary text-bg-light"
+                >Style guide</a
+              >
+              <a href="#" class="text-lg font-secondary text-bg-light"
+                >Licenses</a
+              >
+            </div>
+            <div class="flex items-center gap-6">
+              <i class="ri-facebook-circle-fill text-[22px] text-white"></i>
+              <i class="ri-instagram-line text-[22px] text-white"></i>
+              <i class="ri-twitter-x-line text-[22px] text-white"></i>
+              <i class="ri-linkedin-box-fill text-[22px] text-white"></i>
+            </div>
+          </div>
+          <div class="bg-text-light w-full h-[1px]"></div>
+          <p
+            class="text-lg font-secondary text-white text-center mt-[30px] md:mt-[40px] xl:mt-[80px]"
+          >
+            Designed by
+            <a
+              href="#"
+              class="text-bg duration-300 hover:underline decoration-2"
+              >Webestica</a
+            >, Powered by
+            <a
+              href="#"
+              class="text-bg duration-300 hover:underline decoration-2"
+              >Webflow</a
+            >.
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
